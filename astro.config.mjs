@@ -9,4 +9,6 @@ export default defineConfig({
             tailwindcss()
         ]
     },
+    site: "https://lijucay.github.io/",
+    output: 'static'
 });
