@@ -210,8 +210,6 @@ svg text {
 }
 
 .blog-entry {
-  
-
   h1 {
     @apply text-3xl pt-6 font-extrabold
   }
