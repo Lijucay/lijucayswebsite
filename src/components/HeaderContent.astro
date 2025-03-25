@@ -1,0 +1,8 @@
+---
+
+const { title, classAttributes } = Astro.props as {
+    title: string;
+    classAttributes?: string;
+};
+---
+<a class={`items-center justify-center flex h-20 lg:mt-8 lg:px-16 px-4 sm:px-8 xl:px-32 ${classAttributes} m-4 hover:opacity-80 focus:opacity-60 transition-all font-extrabold text-3xl text-(--color-primary)`} href="/"><p>{title}</p></a>
