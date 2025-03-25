@@ -4,13 +4,20 @@ import Header from "@site/components/Header.astro";
 import About from '@site/components/About.astro';
 import '@site/styles/global.css'
 import Projects from '@site/components/projects.astro';
+import HeaderContent from '@site/components/HeaderContent.astro';
+import Footer from '@site/components/Footer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Header showLogo={true} showGithub={true}/>
-	<About />
-	<Projects />
+	<Header>
+		<HeaderContent title="Lijucay"/>
+	</Header>
+	<div class="lg:px-16 xl:px-32 flex-grow">
+		<About />
+		<Projects />
+	</div>
+	<Footer/>
 </Layout>
