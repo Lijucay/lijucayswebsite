@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<Layout>
+<Layout title={`${post ? post.title : 'Unknown'} | Blog | Lijucay`}>
     {post ? (
         <Header title={post.title}/>
         <article set:html={postContent} class="blog-entry max-w-[80%] mx-auto text-(--color-on-background)"/>
