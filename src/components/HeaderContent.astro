@@ -1,8 +1,18 @@
 ---
+import logoLight from '@site/assets/brand/light/logo_icon.png';
+import logoDark from '@site/assets/brand/dark/logo_icon.png';
 
-const { title, classAttributes } = Astro.props as {
-    title: string;
-    classAttributes?: string;
-};
+const { classAttributes } = Astro.props as { classAttributes?: string };
 ---
-<a class={`items-center justify-center flex h-20 lg:mt-8 lg:px-16 px-4 sm:px-8 xl:px-32 ${classAttributes} m-4 hover:opacity-80 focus:opacity-60 transition-all font-extrabold text-3xl text-(--color-primary)`} href="/"><p>{title}</p></a>
+<div class={`items-center justify-center flex py-4 px-4 lg:px-16 sm:px-8 ${classAttributes}`} >
+    <a href="/" class="hover:opacity-80 focus:opacity-60 transition-all">
+        <div class="items-center float-right flex dark:hidden"> 
+            <img src={logoLight.src} alt="lijucay" class="h-8"/>
+            <p class="text-black text-[40px] font-extrabold ml-4">Lijucay</p>
+        </div>
+        <div class="items-center float-right hidden dark:flex">
+            <img src={logoDark.src} alt="lijucay" class=" aspect-auto h-8"/>
+            <p class="text-white text-[40px] font-extrabold ml-4">Lijucay</p>
+        </div>
+    </a>
+</div>
